@@ -1,4 +1,6 @@
 import Carousel from "./Carousel";
+import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 export default function Section3() {
     const carousels = [
@@ -9,6 +11,13 @@ export default function Section3() {
         "/assets/OT5.png",
         "/assets/OT6.png"
     ]
+    const carousel = useRef()
+    const [ width , setWidth ] = useState(0)
+
+    useEffect(() => {
+        console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+    })
     return (
         <section id="recWork" className="recentWorks">
             <div className="recText">
@@ -43,17 +52,27 @@ export default function Section3() {
                     <img src="/assets/rightImg.png" alt="" />
                 </div>
             </div>
-            <div className="otherWorks">
+            <div className="otherWorksBg">
                 <div className="recText">
                     <h4>Outros trabalhos</h4>
                 </div>
-                <div className="carousel">
-                {carousels.map((carouselImg) => (
-                    <Carousel 
-                        key={carousels.indexOf(carouselImg)}
-                        image={carouselImg}
-                    />        
-                ))}
+                <div className="otherWorksContent">
+                    <motion.div ref={carousel}className="carousel" whileTap={{cursor: "grabbing"}}>
+                        <motion.div className="carouselDiv"
+                        drag="x"
+                        dragConstraints={{ right: 0, left: -width}}
+                        initial={{ x: 100 }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        >
+                            {carousels.map((carouselImg) => (
+                                <Carousel 
+                                    key={carousels.indexOf(carouselImg)}
+                                    image={carouselImg}
+                                />        
+                            ))}
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
 

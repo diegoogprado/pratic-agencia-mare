@@ -1,9 +1,11 @@
+import { motion } from "framer-motion"
+
 export default function Carousel(props) {
     return (
-        <div className="carouselDiv">
-            <div className="imgDiv">
+        
+            <motion.div className="imgDiv">
                 <img src={props.image} alt="" />
-            </div>
-        </div>
+            </motion.div>
+
     )
 }

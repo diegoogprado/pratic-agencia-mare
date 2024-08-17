@@ -255,33 +255,48 @@ button {
   height: 74px;
 }
 
-.otherWorks {
+.otherWorksBg {
   background-color: #f8f8f8;
   width: 100vw;
-  margin-bottom: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .recText {
   margin-bottom: 60px;
 }
 
-.carousel {
+.otherWorksContent {
+  width: 100%;
+  max-width: 1170px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1170px;
-  gap: 30px;
+}
+
+.carousel {
+  display: flex;
+  cursor: grab;
+  overflow: hidden;
 }
 
 .carouselDiv {
-  width: 100%;
-  cursor: grab;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  gap: 30px;
 }
 
 .imgDiv {
   box-shadow: 0 30px 50px #00000010;
+  width: 270px;
+  height: 220px;
+}
+
+.imgDiv img {
+  width: 100%;
+  pointer-events: none;
 }
 
 .callToAction {
@@ -367,10 +382,8 @@ button {
 }
 
 .footer hr {
-  color: #ffffff;
+  border: 1px solid #ffffff;
   width: 1170px;
-  height: 1px;
-
 }
 
 .footer p {
