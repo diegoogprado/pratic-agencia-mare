@@ -1,4 +1,4 @@
-import logoAgencia from "../../public/assets/logo_agencia.png"
+import logoAgencia from "/assets/logo_agencia.png"
 
 export default function Header() {
     return (

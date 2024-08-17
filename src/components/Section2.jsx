@@ -2,22 +2,22 @@ import ServBox from "./ServBox";
 
 export default function Section2() {
     const services = [{
-        image: "../icone design.png",
+        image: "/icone design.png",
         title:"Web Design"
         }, {
-            image: "../iconeMktDigital.png",
+            image: "/iconeMktDigital.png",
             title: "Marketing Digital"   
         }, {
-            image: "../iconeSEO.png",
+            image: "/iconeSEO.png",
             title: "SEO"
         }, {
-            image: "../iconeSM.png",
+            image: "/iconeSM.png",
             title: "Social Media"
         }, {
-            image: "../iconePlan.png",
+            image: "/iconePlan.png",
             title: "Planejamento"
         }, {
-            image: "../iconeAudioVisual.png",
+            image: "/iconeAudioVisual.png",
             title: "AudioVisual"
         }
     ]
