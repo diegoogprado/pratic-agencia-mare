@@ -1,4 +1,4 @@
-import initImg from "../assets/initImg.png"
+import initImg from "../../public/assets/initImg.png"
 export default function Section1() {
     return (
         <section id="initSection" className="initialSection">
