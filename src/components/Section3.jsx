@@ -18,7 +18,12 @@ export default function Section3() {
         setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
     })
     return (
-        <section id="recWork" className="recentWorks">
+        <motion.div 
+            initial={{ opacity: 0 , y: 100 }}
+            whileInView={{ opacity: 1 , y: 0}}
+            transition={{ duration: 1.5}} 
+            id="recWork" 
+            className="recentWorks">
             <div className="recText">
                 <h4>Trabalhos recentes</h4>
                 <p>Resultados relevantes de alguns de nossos clientes.</p>
@@ -75,6 +80,6 @@ export default function Section3() {
                 </div>
             </div>
 
-        </section>
+        </motion.div>
     )
 }

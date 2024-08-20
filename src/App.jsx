@@ -9,9 +9,7 @@ import { motion } from "framer-motion";
 export default function App() {
   return(
     <motion.div className="App"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1  }}
-    transition={{ duration: 1 }}
+
     >
       <Header />
       <Section1 />

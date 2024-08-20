@@ -1,4 +1,5 @@
 import ServBox from "./ServBox";
+import { motion } from "framer-motion";
 
 export default function Section2() {
     const services = [{
@@ -23,7 +24,12 @@ export default function Section2() {
     ]
 
     return(
-        <section id="servSection" className="serviceSection">
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5}}  
+            id="servSection" 
+            className="serviceSection">
             <div className="servTitle">
                 <h2>O que fazemos</h2>
             </div>
@@ -38,6 +44,6 @@ export default function Section2() {
                 
             </div>
             <div className="sec2Bg"></div>
-        </section>
+        </motion.div>
     )
 }
