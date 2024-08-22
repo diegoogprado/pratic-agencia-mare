@@ -14,6 +14,11 @@ export default function Header() {
                     <li><a href="#cta">Contato</a></li>
                 </ul>
             </div>
+            <div className="hambNav">
+                <div className="menuStick top"></div>
+                <div className="menuStick middle"></div>
+                <div className="menuStick bottom"></div>
+            </div>
         </nav>
     )
 }   

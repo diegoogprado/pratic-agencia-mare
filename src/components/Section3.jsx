@@ -42,7 +42,7 @@ export default function Section3() {
                     </div>
                 </div>
             </div>
-            <div className="workContent">
+            <div className="workContent reverse">
                 <div className="contentText">
                     <h4>Como a Adobe aumentou em 5x a conversão do seu site.</h4>
                     <p>Descubra como a Adobe aumentou em 5x a conversão do seu site.

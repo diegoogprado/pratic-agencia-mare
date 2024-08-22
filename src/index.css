@@ -1,39 +1,57 @@
-:root {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f8f8f8;
-  overflow-x: hidden;
+  font-size: 20px;
 }
+:root {
+  background-color: #f8f8f8;
+}
+
 @font-face {
   font-family: PtSerif;
   src: url(./assets/PT_Serif-Web-Regular.ttf);
 }
 
 .App {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 nav {
-  width: 1170px;
+  width: 100%;
+  max-width: 58.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 53px;
+  margin: 1rem 0 2.65rem;
 }
 
-ul, a {
+.hambNav {
+  display: none;
+}
+
+.menuStick {
+  width: 2.25rem;
+  height: 0.4rem;
+  background-color: #000;
+}
+
+
+
+.menuUl ul, .menuUl a {
   display: flex;
-  gap: 60px;
+  flex-wrap: nowrap;
+  gap: 3rem;
   list-style: none;
   text-decoration: none;
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1rem;
   color: #23292a;
+  padding: 0 0 .5rem;
 }
 
 a:hover {
@@ -42,73 +60,82 @@ a:hover {
 }
 
 .logo img {
-  width: 170px;
+  max-width: 8.5rem;
 }
 
 .initialSection {
-  width: 1170px;
+  width: 100%;
+  max-width: 58.5rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
   justify-content: space-between;
-  margin-bottom: 120px;
+  margin-bottom: 6rem;
 }
 
 .initText {
-  max-width: 470px;
+  width: 100%;
+  max-width: 23.5rem;
 }
 
 .initText h2 {
+  width: 100%;
   font-family: PtSerif;
-  font-size: 65px;
+  font-size: 3.25rem;
   font-weight: 500;
-  line-height: 55px ;
+  line-height: 2.75rem ;
   margin: 0;
 }
 
 .initText p {
   font-family: Montserrat;
   color: #626a6c;
-  font-size: 18px;
-  line-height: 22px;
-  margin: 22px 0 36px;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  margin: 1.1rem 0 1.8rem;
   font-weight: 500;
 }
 
-.initImg img{
-  max-width: 600px;
-  box-shadow: 0 30px 50px #00000010;
+.initImg{
+  max-width: 30rem;
+  min-width: 15rem;
+  box-shadow: 0 1.5rem 2.5rem #00000010;
+}
+
+.initImg img {
+  width: 100%;
 }
 
 .initButtons {
   display: flex;
-  gap: 33px;
+  gap: 1.65rem;
 }
 
 #toWorks {
   background-color: #1cbfdf;
   border: none;
-  width: 181px;
-  padding: 15px 30px;
+  width: 9.05rem;
+  padding: .75rem 1.5rem;
 }
 
 #toWorks a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 
 #contactUs {
   background-color: #ffffff;
-  border: 4px solid #1cbfdf;
-  width: 235px;
-  padding: 15px 30px;
+  border: 0.2rem solid #1cbfdf;
+  width: 11.75rem;
+  padding: .75rem 1.5rem;
 
 }
 
 #contactUs a {
-  font-size: 18px;
+  font-size: 0.9rem;
   text-decoration: none;
   color: #1cbfdf;
   font-weight: 500;
@@ -122,59 +149,64 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1170px;;
-  margin-bottom: 100px;
+  width: 100%;
+  max-width: 58.5rem;
+  margin-bottom: 5rem;
 }
 
 .servTitle h2 {
   font-family: PtSerif;
-  font-size: 43.1px;
+  font-size: 2.15rem;
   font-weight: 500;
-  margin: 0 0 45px;
+  margin: 0 0 2.25rem;
 }
 
 .servBoxes {
   display: flex;
   flex-wrap: wrap ;
   justify-content: center;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .servbox {
+
   background-color: #ffffff;  
-  box-shadow: 0 30px 50px #00000010; 
-  min-width: 270px;
-  height: 220px;
+  box-shadow: 0 1.5rem 2.5rem #00000010; 
+  min-width: 13.5rem;
 }
 
 .innerDiv {
-  margin: 32px;
+  margin: 1.6rem;
+  width: 100%;
 }
 
 .servIcon {
-  border: 5px solid #dedede;
-  border-radius: 100px;
-  width: 100px;
-  margin-bottom: 20px;
+  border: 0.25rem solid #dedede;
+  border-radius: 5rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+  max-width: 5rem;
+  width: 100%;
 }
 
 .servIcon img {
-  margin: 20px 20px;
+  margin: 1rem 1rem;
 }
 
 .servbox h4 {
   font-family: Montserrat;
   font-weight: bold;
   margin: 0;
-  font-size: 20.1px;
+  font-size: 1rem;
+  width: 100%;
 }
 
 .sec2Bg {
   background-color: #1cbfdf;
   width: 100vw;
-  height: 484px;
+  height: 24.2rem;
   position: absolute;
-  top: 880px;
+  top: 44rem;
   z-index: -1;
 }
 
@@ -188,12 +220,13 @@ button {
 
 .recText {
   text-align: center;
-  margin-bottom: 60px;
-  margin-top: 80px;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
+
 .recText h4 {
   font-family: PtSerif;
-  font-size: 43.1px;
+  font-size: 2.15rem;
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -202,8 +235,8 @@ button {
 .recText p {
   font-family: Montserrat;
   color: #626a6c;
-  font-size: 16px;
-  line-height: 22px;  
+  font-size: 0.8rem;
+  line-height: 1.1rem;  
   font-weight: 500;
   margin: 0;
 }
@@ -211,35 +244,40 @@ button {
 .workContent {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 1170px;
-  gap: 130px;
-  margin-bottom: 60px ;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 58.5rem;
+  gap: 1rem;
+  margin-bottom: 3rem ;
+}
+
+.contentImg {
+  box-shadow: 0 1.5rem 2.5rem #00000010; 
+  width: 31.25rem;
 }
 
 .contentImg img {
-  box-shadow: 0 30px 50px #00000010; 
-  width: 625px;
+  width: 100%;
 }
 
 .contentText {
-  width: 370px;
+  width: 18.5rem;
 }
 
 .contentText h4 {
   font-family: PtSerif;
   font-weight: 500;
-  font-size: 31.25px;
-  line-height: 31px;
+  font-size: 1.55rem;
+  line-height: 1.55rem;
   margin: 0;
 }
 
 .contentText p {
   font-family: Montserrat;
   color: #626a6c;
-  font-size: 16px;
-  line-height: 22px;
-  margin: 30px 0;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin: 1.5rem 0;
   font-weight: 500;
 }
 
@@ -253,22 +291,22 @@ button {
   margin: 0;
   color:#1cbfdf;
   font-weight: bold;
-  font-size: 21.1px;
-  max-width: 149px;
+  font-size: 1.05rem;
+  max-width: 7.45rem;
 }
 
 .distacNLogo span {
   align-content: center;
   text-align: center;
-  border: 1px solid #e1e9eb;
-  width: 170px;
-  height: 74px;
+  border: 0.05rem solid #e1e9eb;
+  width: 8.5rem;
+  height: 3.7rem;
 }
 
 .otherWorksBg {
   background-color: #f8f8f8;
   width: 100vw;
-  padding-bottom: 90px;
+  padding-bottom: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,12 +314,12 @@ button {
 }
 
 .recText {
-  margin-bottom: 60px;
+  margin-bottom: 3rem;
 }
 
 .otherWorksContent {
   width: 100%;
-  max-width: 1170px;
+  max-width: 58.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,13 +333,13 @@ button {
 
 .carouselDiv {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .imgDiv {
-  box-shadow: 0 30px 50px #00000010;
-  width: 270px;
-  height: 220px;
+  box-shadow: 0 1.5rem 2.5rem #00000010;
+  width: 13.5rem;
+  height: 11rem;
 }
 
 .imgDiv img {
@@ -318,47 +356,47 @@ button {
 }
 
 .ctaText {
-  margin-top: 90px;
+  margin-top: 4.5rem;
   text-align: center;
 }
 
 .ctaText h4{
   font-family: PtSerif;
-  width: 770px;
+  width: 38.5rem;
   color: #ffffff;
   font-weight: 500;
-  font-size: 43.1px;
-  line-height: 50px;
-  margin: 0 0 60px;
+  font-size: 2.15rem;
+  line-height: 2.5rem;
+  margin: 0 0 3rem;
 }
 
 .callToAction form {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
   justify-content: center;
-  width: 770px;
-  margin-bottom: 90px;
+  width: 38.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .callToAction input {
   background-color: #ffffff;
   color: #878787;
   border: none;
-  padding: 20px 123px 20px 23px;
+  padding: 1rem 6.15rem 1rem 1.15rem;
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 18px;
-  width: 370px;
+  font-size: 0.9rem;
+  width: 18.5rem;
 }
 
 .callToAction button {
-  width: 170px;
+  width: 8.5rem;
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.75rem;
   color: #ffffff;
   background-color: #23292a;
-  padding: 20px 27px;
+  padding: 1rem 1.35rem;
 }
 
 .footer {
@@ -370,35 +408,251 @@ button {
   align-items: center;
 }
 
-.contactF {
-  display: flex;
-  justify-content: space-between;
-  width: 1170px;
-  margin: 60px 0 60px;
-}
-
-.contact1 {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  height: 23px;
-}
-
-.contact1 p {
-  color: #878787;
-  font-family: Montserrat;
-  font-weight: 500;
-  font-size: 18px;
-}
-
 .footer hr {
-  border: 1px solid #ffffff;
-  width: 1170px;
+  border: 0.05rem solid #ffffff;
+  width: 100%;
+  max-width: 58.5rem;
 }
 
 .footer p {
   color: #878787;
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 0.7rem;
+  margin: 1rem 0;
+}
+
+.contactF {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  width: 100%;
+  gap: 1rem;
+  max-width: 58.5rem;
+  margin: 3rem 0 3rem;
+}
+
+.contact1 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 1.15rem;
+}
+
+.contact1 p {
+  color: #878787;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    padding-left: 1rem;
+  }
+  .hambNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .menuUl {
+    display: none;
+  }
+
+  .initialSection {
+    justify-content: center;
+  }
+
+  .initText h2 {
+   text-align: center; 
+   padding: 0 1rem;
+  }
+ 
+  .initText p {
+    font-size: 0.8rem;
+    text-align: center; 
+    padding: 0 1rem;
+  }
+  
+  .initImg{
+  display: none;
+  }
+  
+  .initButtons {   
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  #toWorks {
+    min-width: 9.05rem;
+    padding: 1rem .5rem;
+  }
+  
+  
+  #contactUs {
+    min-width: 9.05rem;
+    padding: 1rem .5rem  
+  }
+
+  .serviceSection, .otherWorksContent {
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+   
+  .servBoxes, .carousel {
+    display: flex;
+    justify-content: flex-start;
+    cursor: grab;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 4rem;
+  }
+
+  .carousel {
+    padding-left: 3rem;
+  }
+
+  .servBoxesDiv, .carouselDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+  
+  
+  .servbox {
+    box-shadow: 0 1.5rem 2.5rem #00000010;
+
+  }
+
+  .innerDiv {
+    pointer-events: none;
+  }
+
+  .sec2Bg {
+    height: 9rem;
+    top: 39rem;
+  }
+
+  .recText {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .workContent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contentText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .contentImg {
+    width: 100%;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    }
+  
+  .reverse .contentText {
+    max-width: 16rem;
+  }  
+
+  
+  .ctaText {
+    margin-top: 4.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .ctaText h4{
+    width: 100%;
+    font-size: 1.9rem;
+    margin: 0 0 1.5rem;
+  }
+  
+  .callToAction form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 25rem;
+    padding: 0 1rem; 
+  }
+  
+  .callToAction input {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .callToAction button {
+    width: 100%;
+  }
+  
+  .contactF {
+    flex-direction: column;
+    justify-items: center;
+
+  }
+}
+
+@media (max-width: 425px) {
+  .initialSection {
+    margin-bottom: 3rem;
+  }
+
+  .initText h2 {
+    font-size: 2.5rem;
+  }
+
+  .initButtons {   
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .serviceSection h2 {
+    font-size: 2rem;
+  }
+
+  .sec2Bg {
+    top: 41rem;
+  }
+
+  .contentText {
+    padding: 0 1rem;
+  }
+
+  .recText h4 {
+    font-size: 2rem;
+    line-height: 1.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .recText {
+    margin-top: 3rem;
+  }
+
+
+  .contactF {
+    align-items: center;
+  }
+
+  .contact1 img {
+    display: none;
+  }
+
 }
