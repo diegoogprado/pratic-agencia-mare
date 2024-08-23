@@ -6,21 +6,21 @@ export default function openMenu() {
 
     const stickStyle = [" top", " middle", " bottom"]
 
-    const menuUlStyle = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-    }
-
     const click = () => {
         if(menuStick === "" ) {
             setMenuStick(stickStyle)
             setMaxBar("maxBar")
         } else {
-            setMenuStick("")
-            setMaxBar("")
+            resetStatus()
         }
     }
 
-    return { click, menuStick, maxBar}
+    const resetStatus = () => {
+        setMenuStick("")
+        setMaxBar("")
+    }
+
+    
+
+    return { click, menuStick, maxBar, resetStatus }
 }

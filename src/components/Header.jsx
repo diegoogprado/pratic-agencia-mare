@@ -4,14 +4,13 @@ import openMenu from "../hooks/openMenu"
 export default function Header() {
 
     const open = openMenu()
-
     return (
         <nav>
             <div className="logo">
                 <img src={logoAgencia} alt="" />
             </div>
             <div className={`menuUl + ${open.maxBar}`}>
-                <ul>
+                <ul onClick={open.resetStatus}>
                     <li><a href="#initialSection">Início</a></li>
                     <li><a href="#servSection">Sobre Nós</a></li>
                     <li><a href="#recWork">Trabalhos</a></li>

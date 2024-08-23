@@ -501,6 +501,7 @@ button {
     position: absolute; 
     transition: all 1s; 
     box-shadow: 0 1.5rem 2.5rem #00000010;
+    z-index: 1;
   }
 
   .maxBar a {
@@ -593,7 +594,6 @@ button {
   .workContent {
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
   }
 
@@ -602,7 +602,8 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin: 0 auto; */
+    width: 100%;
+    max-width: 16rem;
   }
 
   .contentImg {

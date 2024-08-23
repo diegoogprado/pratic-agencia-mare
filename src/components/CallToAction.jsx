@@ -1,6 +1,17 @@
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 export default function CallToAction() {
+
+    const [ email, setEmail ] = useState('')
+
+    function sendEmail(e){
+        e.preventDefault()
+        alert("email enviado "+ email)
+        setEmail('')
+        return
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 , y: 100 }}
@@ -12,9 +23,9 @@ export default function CallToAction() {
                 <h4>Transforme como as pessoas
                 se relacionam com a sua marca.</h4>
             </div>
-            <form action="">
+            <form onSubmit={sendEmail}>
                 <label htmlFor="email"></label>
-                <input type="email" name="email" placeholder="Deixe seu melhor e-mail" />
+                <input type="email" name="email" placeholder="Deixe seu melhor e-mail" onChange={(e) => setEmail(e.target.value)} value={email}/>
                 <button>Enviar agora</button>
             </form>
         </motion.div>
