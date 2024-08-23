@@ -677,6 +677,10 @@ button {
     width: 100%;
   }
 
+  #toWorks, #contactUs {
+    width: 100%;
+  }
+
   .serviceSection h2 {
     font-size: 2rem;
   }
