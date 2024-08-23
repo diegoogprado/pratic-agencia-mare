@@ -35,13 +35,6 @@ nav {
   display: none;
 }
 
-.menuStick {
-  width: 2.25rem;
-  height: 0.4rem;
-  background-color: #000;
-}
-
-
 
 .menuUl ul, .menuUl a {
   display: flex;
@@ -461,8 +454,60 @@ button {
     padding-bottom: 0.5rem;
   }
 
+  .menuStick {
+    width: 2.25rem;
+    height: 0.4rem;
+    background-color: #000;
+    transition: all .55s;
+  }
+  
+  .top {
+    margin-top: .3rem;
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: all .55s;
+    background-color: #1cbfdf;
+  }
+  
+  .middle {
+    margin-top: .3rem;
+    transition: all .55s;
+    transform: rotate(45deg);
+    background-color: #1cbfdf;
+  }
+  
+  .bottom {
+    display: none;
+  }
+
   .menuUl {
     display: none;
+  }
+  
+  .maxBar {
+    display: flex;
+    width: 100%;
+    
+  }
+
+  .maxBar ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8; 
+    width: 100%;  
+    top: 6rem;
+    left: 0;
+    padding: 4rem;
+    position: absolute; 
+    transition: all 1s; 
+    box-shadow: 0 1.5rem 2.5rem #00000010;
+  }
+
+  .maxBar a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
   }
 
   .initialSection {
@@ -548,6 +593,8 @@ button {
   .workContent {
     display: flex;
     flex-wrap: wrap;
+    
+    justify-content: center;
   }
 
   .contentText {
@@ -555,7 +602,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .contentImg {
@@ -568,9 +615,12 @@ button {
     }
   
   .reverse .contentText {
-    max-width: 16rem;
+    max-width: 16rem; 
   }  
 
+  .distacNLogo {
+    width: 100%;
+  }
   
   .ctaText {
     margin-top: 4.5rem;
